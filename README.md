@@ -11,4 +11,4 @@
 ### Controller
 ![Injection des dependances](https://github.com/AbdelouahedErraji/Patients-Spring-MVC/blob/master/img/controller.png?raw=true)
 ### Patient template
-![Injection des dependances](https://github.com/AbdelouahedErraji/Patients-Spring-MVC/blob/master/img/patient template.png?raw=true)
+![Injection des dependances](https://github.com/AbdelouahedErraji/Patients-Spring-MVC/blob/master/img/patient-template.png?raw=true)
