@@ -21,9 +21,9 @@ public class SpringmvcApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		patientRepository.save(new Patient(null, "Adam", new Date(), false));
-		patientRepository.save(new Patient(null, "Youssef", new Date(), false));
-		patientRepository.save(new Patient(null, "Hamza", new Date(), true));
+		patientRepository.save(new Patient(null, "Adam", new Date(), false, 4));
+		patientRepository.save(new Patient(null, "Youssef", new Date(), false, 6));
+		patientRepository.save(new Patient(null, "Hamza", new Date(), true, 9));
 		
 		patientRepository.findAll().forEach(p -> {
 			System.out.println(p.getName());

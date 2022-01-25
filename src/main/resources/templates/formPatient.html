@@ -1,0 +1,39 @@
+	<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+	  xmlns:layout="http://www.utraq.net.nz/thymeleaf/layout"
+	  layout:decorate="template1.html"
+>
+<head>
+<meta charset="utf-8">
+<title>Form Patients</title>
+</head>
+<body>
+	<div layout:fragment="pageContent" class="container">
+		<div class="container">
+			<form th:action="@{savePatient}" method="post">
+				<div class="form-group">
+					<label class="control">Name: </label>
+					<input type="text" name="name" class="form-control" th:value="${patient.name}">
+					<span th:errors=${patient.name} class="text-danger"></span>
+				</div>
+				<div class="form-group mt-4">
+					<label class="control">Score: </label>
+					<input type="text" name="score" class="form-control" th:value="${patient.score}">
+					<span th:errors=${patient.score} class="text-danger"></span>
+				</div>
+				<div class="form-group mt-4">
+					<label class="control">Date Naissance: </label>
+					<input type="date" name="dateNaissance" class="form-control" th:value="${patient.dateNaissance}">
+					<span th:errors=${patient.dateNaissance} class="text-danger"></span>
+				</div>
+				<div class="form-check my-4">
+					<label class="control">Malade</label>
+					<input type="checkbox" name="malade" class="form-check-input" th:checked="${patient.malade}">
+					<span th:errors=${patient.malade} class="text-danger"></span>
+				</div>
+				<button class="btn btn-success" type="submit">Save</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
